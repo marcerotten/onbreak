@@ -227,10 +227,10 @@
     <Resource Include="Imagenes\User Setting-01-WF.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="clientes.png" />
+    <Resource Include="Imagenes\clientes.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="contrato.png" />
+    <Resource Include="Imagenes\contrato.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\backblue.jpg" />
@@ -249,6 +249,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagenes\JJddMesa de trabajo 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

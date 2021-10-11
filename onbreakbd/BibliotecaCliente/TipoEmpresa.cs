@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BibliotecaCliente.Servicios.Interfaces;
 using ClienteDatos;
 
 namespace BibliotecaCliente
@@ -50,12 +51,13 @@ namespace BibliotecaCliente
         {
             //Se inicia la base de datos a traves de la clase OnbreakEntities
             OnBreakEntities bbdd = new OnBreakEntities();
-
+            
             try
             {
                 //Se obtienen los datos de la BD en una lista
                 List<ClienteDatos.TipoEmpresa> listaDatos = bbdd.TipoEmpresa.ToList();
-
+                //Test service
+                //List<ClienteDatos.TipoEmpresa> listaDatos2 = _holidayService.GetHoliday(1);
                 //Se llama al metodo generarListado para convertir ClienteDatos.TipoEmpresa a TipoEmpresa
                 List<TipoEmpresa> listadoTipoEmpresa = generarListado(listaDatos);
 

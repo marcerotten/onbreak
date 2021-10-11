@@ -46,7 +46,8 @@ namespace ClienteWPF
 
             using (HttpClient client = new HttpClient())
             {
-                var response = await client.GetAsync($"http://localhost:8080/api/{usuario}");
+                //http://localhost:8080/api/{usuario}
+                var response = await client.GetAsync($"https://www.feriadosapp.com/api/holidays.json");
                 response.EnsureSuccessStatusCode();
                 if (response.IsSuccessStatusCode)
                 {

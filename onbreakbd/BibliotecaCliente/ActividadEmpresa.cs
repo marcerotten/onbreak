@@ -25,7 +25,7 @@ namespace BibliotecaCliente
         public bool Read(int id) {
             //Se inicia la base de datos a traves de la clase OnbreakEntities
             OnBreakEntities bbdd = new OnBreakEntities();
-
+            
             try
             {
                 //Se busca el primer resultado que coincida con el id
@@ -51,6 +51,7 @@ namespace BibliotecaCliente
             try
             {
                 //Se obtienen los datos de la BD en una lista
+                //List<ClienteDatos.ActividadEmpresa> listaDatos2 = GetHoliday();
                 List<ClienteDatos.ActividadEmpresa> listaDatos = bbdd.ActividadEmpresa.ToList();
 
                 //Se llama al metodo generarListado para convertir ClienteDatos.ActividadEmpresa a ActividadEmpresa
