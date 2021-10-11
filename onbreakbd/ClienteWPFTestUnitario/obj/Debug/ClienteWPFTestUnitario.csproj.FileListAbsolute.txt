@@ -66,3 +66,7 @@ C:\Users\larp\Desktop\GITLAB_Onbreak\onbreakbd\ClienteWPFTestUnitario\obj\Debug\
 C:\Users\larp\Desktop\GITLAB_Onbreak\onbreakbd\ClienteWPFTestUnitario\obj\Debug\ClienteWPFTestUnitario.csproj.CopyComplete
 C:\Users\larp\Desktop\GITLAB_Onbreak\onbreakbd\ClienteWPFTestUnitario\obj\Debug\ClienteWPFTestUnitario.dll
 C:\Users\larp\Desktop\GITLAB_Onbreak\onbreakbd\ClienteWPFTestUnitario\obj\Debug\ClienteWPFTestUnitario.pdb
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteWPFTestUnitario\obj\Debug\ClienteWPFTestUnitario.csproj.AssemblyReference.cache
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteWPFTestUnitario\obj\Debug\ClienteWPFTestUnitario.csproj.CoreCompileInputs.cache
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteWPFTestUnitario\obj\Debug\ClienteWPFTestUnitario.dll
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteWPFTestUnitario\obj\Debug\ClienteWPFTestUnitario.pdb

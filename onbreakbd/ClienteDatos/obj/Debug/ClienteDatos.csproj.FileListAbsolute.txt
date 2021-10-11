@@ -106,3 +106,14 @@ C:\Users\test4\source\repos\onbreakbd\ClienteDatos\obj\Debug\ClienteDatos.csproj
 C:\Users\test4\source\repos\onbreakbd\ClienteDatos\obj\Debug\ClienteDatos.csproj.CopyComplete
 C:\Users\test4\source\repos\onbreakbd\ClienteDatos\obj\Debug\ClienteDatos.dll
 C:\Users\test4\source\repos\onbreakbd\ClienteDatos\obj\Debug\ClienteDatos.pdb
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteDatos\bin\Debug\ClienteDatos.dll.config
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteDatos\bin\Debug\ClienteDatos.dll
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteDatos\bin\Debug\ClienteDatos.pdb
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteDatos\bin\Debug\EntityFramework.dll
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteDatos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteDatos\bin\Debug\EntityFramework.xml
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteDatos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteDatos\obj\Debug\ClienteDatos.csproj.CoreCompileInputs.cache
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteDatos\obj\Debug\ClienteDatos.csproj.CopyComplete
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteDatos\obj\Debug\ClienteDatos.dll
+C:\Users\test4\source\repos\onbreak\onbreakbd\ClienteDatos\obj\Debug\ClienteDatos.pdb
