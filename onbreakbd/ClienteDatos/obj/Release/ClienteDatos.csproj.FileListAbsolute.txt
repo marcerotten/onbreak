@@ -1,0 +1,12 @@
+D:\DUOCUC\Semestre III\Desarrollo software\SoluOnBreak\Solucion Clientes WPF_11\ClienteDatos\bin\Release\ClienteDatos.dll.config
+D:\DUOCUC\Semestre III\Desarrollo software\SoluOnBreak\Solucion Clientes WPF_11\ClienteDatos\bin\Release\ClienteDatos.dll
+D:\DUOCUC\Semestre III\Desarrollo software\SoluOnBreak\Solucion Clientes WPF_11\ClienteDatos\bin\Release\ClienteDatos.pdb
+D:\DUOCUC\Semestre III\Desarrollo software\SoluOnBreak\Solucion Clientes WPF_11\ClienteDatos\bin\Release\EntityFramework.dll
+D:\DUOCUC\Semestre III\Desarrollo software\SoluOnBreak\Solucion Clientes WPF_11\ClienteDatos\bin\Release\EntityFramework.SqlServer.dll
+D:\DUOCUC\Semestre III\Desarrollo software\SoluOnBreak\Solucion Clientes WPF_11\ClienteDatos\bin\Release\EntityFramework.xml
+D:\DUOCUC\Semestre III\Desarrollo software\SoluOnBreak\Solucion Clientes WPF_11\ClienteDatos\bin\Release\EntityFramework.SqlServer.xml
+D:\DUOCUC\Semestre III\Desarrollo software\SoluOnBreak\Solucion Clientes WPF_11\ClienteDatos\obj\Release\ClienteDatos.csprojAssemblyReference.cache
+D:\DUOCUC\Semestre III\Desarrollo software\SoluOnBreak\Solucion Clientes WPF_11\ClienteDatos\obj\Release\ClienteDatos.csproj.CoreCompileInputs.cache
+D:\DUOCUC\Semestre III\Desarrollo software\SoluOnBreak\Solucion Clientes WPF_11\ClienteDatos\obj\Release\ClienteDatos.csproj.CopyComplete
+D:\DUOCUC\Semestre III\Desarrollo software\SoluOnBreak\Solucion Clientes WPF_11\ClienteDatos\obj\Release\ClienteDatos.dll
+D:\DUOCUC\Semestre III\Desarrollo software\SoluOnBreak\Solucion Clientes WPF_11\ClienteDatos\obj\Release\ClienteDatos.pdb
