@@ -8,6 +8,9 @@ using System.Windows.Media.Imaging;
 using BibliotecaCliente;
 using System.Windows.Media;
 using System.Net.Http;
+using ClienteWPF.Models;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace ClienteWPF
 {
@@ -38,13 +41,25 @@ namespace ClienteWPF
             string user = txtUser.Text;
             string pass = txtPassword.Password;
 
-            using (HttpClient client = new HttpClient())
+            var userObject = new
             {
-                var response = await client.GetAsync($"http://localhost:8080/api/auth");
+                correo = user,
+                contrasena = pass
+            };
+
+            var json = JsonConvert.SerializeObject(userObject);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+            var url = "http://localhost:8080/api/auth";
+
+
+            using (HttpClient client = new HttpClient())
+
+            {
+                var response = await client.PostAsync(url, data);
                 response.EnsureSuccessStatusCode();
                 if (response.IsSuccessStatusCode)
                 {
-                    message.Content = await response.Content.ReadAsStringAsync();
+                    //message.Content = await response.Content.ReadAsStringAsync();
                     Menu ventana = new Menu();
                     ventana.Show();
                 }
