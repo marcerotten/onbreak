@@ -69,14 +69,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BibliotecaCliente\BibliotecaCliente.csproj">
-      <Project>{59945c78-b9b0-493a-b225-365a39efdd6c}</Project>
-      <Name>BibliotecaCliente</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ClienteDatos\ClienteDatos.csproj">
-      <Project>{1ae8a99d-bcdb-4909-8356-f64d0444deb4}</Project>
-      <Name>ClienteDatos</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ClienteWPF\ClienteWPF.csproj">
       <Project>{B45C523A-93FC-4AB7-B000-759148CDD409}</Project>
       <Name>ClienteWPF</Name>

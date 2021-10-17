@@ -68,12 +68,6 @@
     <Compile Include="Valorizador.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClienteDatos\ClienteDatos.csproj">
-      <Project>{1ae8a99d-bcdb-4909-8356-f64d0444deb4}</Project>
-      <Name>ClienteDatos</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
