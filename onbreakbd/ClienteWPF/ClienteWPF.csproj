@@ -106,6 +106,10 @@
     </Compile>
     <Compile Include="Models\Pais.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\NotifyBase.cs" />
+    <Compile Include="ViewModel\ClientViewModel.cs" />
+    <Compile Include="ViewModel\CommandBase.cs" />
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
@@ -254,6 +258,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\Interfaces\" />
+    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
