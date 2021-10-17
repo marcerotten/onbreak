@@ -16,6 +16,8 @@ using BibliotecaCliente;
 using System.Data;
 using MahApps.Metro.Controls.Dialogs;
 using System.Net.Http;
+using Newtonsoft.Json;
+using ClienteWPF.Models;
 
 namespace ClienteWPF
 {
@@ -189,8 +191,43 @@ namespace ClienteWPF
                 response.EnsureSuccessStatusCode();
                 if (response.IsSuccessStatusCode)
                 {
-                    message.Content = await response.Content.ReadAsStringAsync();
-                    
+                    //List<Usuario_info> usuarios = new List<Usuario_info>();
+                    var res = await response.Content.ReadAsStringAsync();
+                    //var userList = JsonConvert.DeserializeObject<List<Usuario_info>>(res);
+                    var userList = JsonConvert.DeserializeObject<dynamic>(res);
+
+                    //message.Content = historyname;
+
+                    foreach (var dato in userList)
+                    {
+                        DataRow row = dt.NewRow();
+
+                        //actividadEmpresa.Read(dato.IdActividadEmpresa);
+                        //tipoEmpresa.Read(dato.IdTipoEmpresa);
+
+                        row["Nombre"] = dato.nombre;
+                        row["Apellido Paterno"] = dato.apPaterno;
+                        row["Apellido Materno"] = dato.apMaterno;
+                        row["DNI"] = dato.dni;
+                        row["Dirección"] = dato.direccion;
+                        row["Código Postal"] = dato.coPostal;
+                        row["Correo"] = dato.correo;
+                        row["Pais"] = dato.idPais;
+                        row["Rol"] = dato.idRol;
+                        row["Estado"] = dato.idEstado;
+                        row["Términos y Condiciones"] = dato.terminosCondiciones;
+
+                        dt.Rows.Add(row);
+                    }
+
+                    dgClientes.ClearValue(ItemsControl.ItemsSourceProperty);
+                    /*
+                     * Para traerlo desde la clase
+                    dgClientes.ItemsSource = userList; //dt.DefaultView;
+                    */
+                    dgClientes.ItemsSource = dt.DefaultView;
+                    dgClientes.UpdateLayout();
+
                 }
                 else
                 {
@@ -198,27 +235,7 @@ namespace ClienteWPF
                 }
             }
 
-            //foreach (Cliente dato in listaClientes) {
-            //    DataRow row = dt.NewRow();
-
-            //    actividadEmpresa.Read(dato.IdActividadEmpresa);
-            //    tipoEmpresa.Read(dato.IdTipoEmpresa);
-
-            //    row["Rut Cliente"] = dato.RutCliente;
-            //    row["Razón social"] = dato.RazonSocial;
-            //    row["Nombre contacto"] = dato.NombreContacto;
-            //    row["Mail contacto"] = dato.MailContacto;
-            //    row["Dirección"] = dato.Direccion;
-            //    row["Telefono"] = dato.Telefono;
-            //    row["Actividad Empresa"] = actividadEmpresa.Descripcion;
-            //    row["Tipo Empresa"] = tipoEmpresa.Descripcion;
-
-            //    dt.Rows.Add(row);
-            //}
-
-            dgClientes.ClearValue(ItemsControl.ItemsSourceProperty);
-            dgClientes.ItemsSource = dt.DefaultView;
-            dgClientes.UpdateLayout();
+            
      
         }
 
