@@ -210,7 +210,7 @@ namespace ClienteWPF
                         row["Apellido Materno"] = dato.apMaterno;
                         row["DNI"] = dato.dni;
                         row["Dirección"] = dato.direccion;
-                        row["Código Postal"] = dato.coPostal;
+                        row["Código Postal"] = dato.codPostal;
                         row["Correo"] = dato.correo;
                         row["Pais"] = dato.idPais;
                         row["Rol"] = dato.idRol;

@@ -57,7 +57,14 @@ namespace ClienteWPF
             {
                 var response = await client.PostAsync(url, data);
                 response.EnsureSuccessStatusCode();
-                if (response.IsSuccessStatusCode)
+                var res = await response.Content.ReadAsStringAsync();
+                var userList = JsonConvert.DeserializeObject<dynamic>(res);
+
+                //validacion mientras la api responde el cod correcto
+                var usuario_info = userList.idUsuario.ToObject<int>();
+
+                //if (response.IsSuccessStatusCode)
+                if (usuario_info != 0)
                 {
                     //message.Content = await response.Content.ReadAsStringAsync();
                     Menu ventana = new Menu();
