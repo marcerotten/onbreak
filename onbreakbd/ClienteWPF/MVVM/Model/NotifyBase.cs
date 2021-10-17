@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClienteWPF.Model
+namespace ClienteWPF.MVVM.Model
 {
-    public class NotifyBase
+    public class NotifyBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -1,4 +1,5 @@
 ﻿using ClienteWPF.Model;
+using ClienteWPF.MVVM.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -10,9 +11,9 @@ using System.Windows.Input;
 
 namespace ClienteWPF.ViewModel
 {
-    class ClientViewModel : ObservableCollection<Client>, INotifyPropertyChanged{
- 
-#region Atributos
+    internal class ClientViewModel : ObservableCollection<Client>, INotifyPropertyChanged
+    {
+        #region Atributos
         private int selectedIndex;
 
         private int id;
