@@ -21,10 +21,10 @@ namespace ClienteWPF
     /// <summary>
     /// Lógica de interacción para Window2.xaml
     /// </summary>
-    public partial class Window2 : MetroWindow
+    public partial class Clientes : MetroWindow
     {
 
-        public Window2()
+        public Clientes()
         {
             InitializeComponent();
             cargarCombos();
@@ -35,7 +35,7 @@ namespace ClienteWPF
             mostrarClientes(listaCliente);
         }
 
-        public Window2(Cliente objCliente) {
+        public Clientes(Cliente objCliente) {
             InitializeComponent();
             cargarCombos();
 

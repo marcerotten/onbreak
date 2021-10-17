@@ -17,37 +17,30 @@ namespace ClienteWPF
 
     public partial class MainWindow : MetroWindow
     {
-        Dictionary<string, string> usuarios = new Dictionary<string, string>()
-        {
-            { "lucas", "lucas123" },
-            { "tomas", "tomas123" },
-            { "profesor", "profe123" }
-        };
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void TxtUsuario_GotFocus(object sender, RoutedEventArgs e)
+        private void TxtUser_GotFocus(object sender, RoutedEventArgs e)
         {
-            txtUsuario.Foreground = new SolidColorBrush(Colors.Gray);
+            txtUser.Foreground = new SolidColorBrush(Colors.Gray);
         }
 
-        private void TxtContraseña_GotFocus(object sender, RoutedEventArgs e)
+        private void TxtPassword_GotFocus(object sender, RoutedEventArgs e)
         {
-            txtContraseña.Foreground = new SolidColorBrush(Colors.Gray);
+            txtPassword.Foreground = new SolidColorBrush(Colors.Gray);
         }
 
         private async void BtnEntrar_Click(object sender, RoutedEventArgs e)
         {
-            string usuario = txtUsuario.Text;
-            string contraseña = txtContraseña.Password;
+            string user = txtUser.Text;
+            string pass = txtPassword.Password;
 
             using (HttpClient client = new HttpClient())
             {
-                //http://localhost:8080/api/{usuario}
-                var response = await client.GetAsync($"https://www.feriadosapp.com/api/holidays.json");
+                var response = await client.GetAsync($"http://localhost:8080/api/auth");
                 response.EnsureSuccessStatusCode();
                 if (response.IsSuccessStatusCode)
                 {
@@ -62,59 +55,15 @@ namespace ClienteWPF
             }
         }
 
-        private void TxtContraseña_LostFocus(object sender, RoutedEventArgs e)
+        private void TxtPassword_LostFocus(object sender, RoutedEventArgs e)
         {
-            txtContraseña.Foreground = new SolidColorBrush(Colors.LightGray);
+            txtPassword.Foreground = new SolidColorBrush(Colors.LightGray);
         }
 
-        private void TxtUsuario_LostFocus(object sender, RoutedEventArgs e)
+        private void TxtUser_LostFocus(object sender, RoutedEventArgs e)
         {
-            txtUsuario.Foreground = new SolidColorBrush(Colors.LightGray);
+            txtUser.Foreground = new SolidColorBrush(Colors.LightGray);
         }
 
-        private void highContrast()
-        {
-            LinearGradientBrush back = (LinearGradientBrush)fondo.BorderBrush;
-            back.GradientStops[0].Color = Colors.Green;
-            back.GradientStops[1].Color = Colors.Black;
-            lblTitulo.Foreground = new SolidColorBrush(Colors.Green);
-            lblIngreso.Foreground = new SolidColorBrush(Colors.Green);
-            lblUsuario.Foreground = new SolidColorBrush(Colors.Green);
-            lblContraseña.Foreground = new SolidColorBrush(Colors.Green);
-            fondoInterno.Background = new SolidColorBrush(Colors.Black);
-            borde.BorderBrush = new SolidColorBrush(Colors.Green);
-            BtnEntrar.Background = new SolidColorBrush(Colors.Green);
-            BtnEntrar.Foreground = new SolidColorBrush(Colors.Black);
-            //Info.highContrast = true;
-        }
-
-        private void lowContrast()
-        {
-            LinearGradientBrush back = (LinearGradientBrush)fondo.BorderBrush;
-            Color miColor = Color.FromRgb(17, 144, 203);
-            back.GradientStops[0].Color = miColor;
-            back.GradientStops[1].Color = Colors.White;
-            lblTitulo.Foreground = new SolidColorBrush(miColor);
-            lblIngreso.Foreground = new SolidColorBrush(miColor);
-            lblUsuario.Foreground = new SolidColorBrush(miColor);
-            lblContraseña.Foreground = new SolidColorBrush(miColor);
-            fondoInterno.Background = new SolidColorBrush(Colors.White);
-            borde.BorderBrush = new SolidColorBrush(miColor);
-            BtnEntrar.Background = new SolidColorBrush(Colors.Gray);
-            BtnEntrar.Foreground = new SolidColorBrush(miColor);
-            //Info.highContrast = false;
-        }
-
-        //private void HighContrast_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (!Info.highContrast)
-        //    {
-        //        highContrast();
-        //    }
-        //    else
-        //    {
-        //        lowContrast();
-        //    }
-        //}
     }
 }

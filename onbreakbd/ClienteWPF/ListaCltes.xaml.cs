@@ -22,7 +22,7 @@ namespace ClienteWPF
     /// </summary>
     public partial class ListaCltes : MetroWindow
     {
-        Window2 mantCliente;
+        Clientes mantCliente;
         public ListaCltes()
         {
             Cliente objCliente = new Cliente();
@@ -32,7 +32,7 @@ namespace ClienteWPF
             mantCliente = null;
         }
 
-        public ListaCltes(Window2 window) {
+        public ListaCltes(Clientes window) {
             Cliente objCliente = new Cliente();
             InitializeComponent();
             cargarCombos();
@@ -199,7 +199,7 @@ namespace ClienteWPF
                 }
                 else
                 {
-                    Window2 ventana = new Window2(objCliente);
+                    Clientes ventana = new Clientes(objCliente);
                     ventana.Show();
                     this.Close();
                 }

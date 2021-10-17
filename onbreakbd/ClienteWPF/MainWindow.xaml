@@ -27,11 +27,11 @@
             <Border Name="borde" BorderBrush="#FF1190CB" BorderThickness="10" HorizontalAlignment="Left" Height="222" Margin="28,114,0,0" VerticalAlignment="Top" Width="557" Grid.ColumnSpan="4">
                 <Grid>
                     <Label Name="lblIngreso" Content="Ingreso" HorizontalAlignment="Left" Margin="25,20,0,0" VerticalAlignment="Top" FontSize="28" Foreground="#FF1190CB" FontWeight="Bold"/>
-                    <Label Name="lblUsuario" Content="Usuario" HorizontalAlignment="Left" Margin="150,67,0,0" VerticalAlignment="Top" Foreground="#FF1190CB"/>
-                    <Label Name="lblContraseña" Content="Contraseña" HorizontalAlignment="Left" Margin="130,98,0,0" VerticalAlignment="Top" Foreground="#FF1190CB"/>
-                    <TextBox Name="txtUsuario" HorizontalAlignment="Left" Height="23" Margin="234,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Controls:TextBoxHelper.Watermark="" Foreground="LightGray" BorderBrush="#FFEAE6E6" GotFocus="TxtUsuario_GotFocus" LostFocus="TxtUsuario_LostFocus"/>
+                    <Label Name="lblUser" Content="Usuario" HorizontalAlignment="Left" Margin="150,67,0,0" VerticalAlignment="Top" Foreground="#FF1190CB"/>
+                    <Label Name="lblPassword" Content="Contraseña" HorizontalAlignment="Left" Margin="130,98,0,0" VerticalAlignment="Top" Foreground="#FF1190CB"/>
+                    <TextBox Name="txtUser" HorizontalAlignment="Left" Height="23" Margin="234,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Controls:TextBoxHelper.Watermark="" Foreground="LightGray" BorderBrush="#FFEAE6E6" GotFocus="TxtUser_GotFocus" LostFocus="TxtUser_LostFocus"/>
                     <Button Name ="BtnEntrar" Content="Entrar" HorizontalAlignment="Left" Margin="199,139,0,0" VerticalAlignment="Top" Width="110" Height="32" Click="BtnEntrar_Click" Foreground="#FF1190CB"/>
-                    <PasswordBox Name="txtContraseña" HorizontalAlignment="Left" Margin="234,98,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.188,1.269" Width="120" Height="23" GotFocus="TxtContraseña_GotFocus" LostFocus="TxtContraseña_LostFocus">
+                    <PasswordBox Name="txtPassword" HorizontalAlignment="Left" Margin="234,98,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.188,1.269" Width="120" Height="23" GotFocus="TxtPassword_GotFocus" LostFocus="TxtPassword_LostFocus">
                         <PasswordBox.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>

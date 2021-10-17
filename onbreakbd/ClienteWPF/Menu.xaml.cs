@@ -30,7 +30,7 @@ namespace ClienteWPF
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
-            Window2 ventana2 = new Window2();
+            Clientes ventana2 = new Clientes();
             ventana2.Owner = this;
             ventana2.ShowDialog();
         }
@@ -51,7 +51,7 @@ namespace ClienteWPF
 
         private void BtnCliente_Click(object sender, RoutedEventArgs e)
         {
-            Window2 window = new Window2();
+            Clientes window = new Clientes();
             window.Show();
             this.Close();
         }
