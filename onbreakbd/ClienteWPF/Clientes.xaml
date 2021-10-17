@@ -21,7 +21,7 @@
             </DockPanel>
         </Button>
         <TextBox x:Name="txtrut" HorizontalAlignment="Left" Height="23" Margin="211,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
-        <Label Content="Razón Social" HorizontalAlignment="Left" Margin="108,151,0,0" VerticalAlignment="Top"/>
+        <Label Name="message" Content="Razón Social" HorizontalAlignment="Left" Margin="108,151,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtrazons" HorizontalAlignment="Left" Height="23" Margin="211,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"/>
         <Label Content="Nombre del Contacto:" HorizontalAlignment="Left" Margin="63,200,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtnombrec" HorizontalAlignment="Left" Height="26" Margin="211,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215"/>

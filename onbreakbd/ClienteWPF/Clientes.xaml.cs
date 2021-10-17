@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using BibliotecaCliente;
 using System.Data;
 using MahApps.Metro.Controls.Dialogs;
+using System.Net.Http;
 
 namespace ClienteWPF
 {
@@ -154,7 +155,7 @@ namespace ClienteWPF
 
         }
 
-        private void mostrarClientes(List<Cliente> listaClientes)
+        private async void mostrarClientes(List<Cliente> listaClientes)
         {
             TipoEmpresa tipoEmpresa = new TipoEmpresa();
             ActividadEmpresa actividadEmpresa = new ActividadEmpresa();
@@ -165,32 +166,55 @@ namespace ClienteWPF
 
             DataTable dt = new DataTable();
 
-            dt.Columns.Add("Rut Cliente");
-            dt.Columns.Add("Razón social");
-            dt.Columns.Add("Nombre contacto");
-            dt.Columns.Add("Mail contacto");
+            dt.Columns.Add("Nombre");
+            dt.Columns.Add("Apellido Paterno");
+            dt.Columns.Add("Apellido Materno");
+            dt.Columns.Add("DNI");
             dt.Columns.Add("Dirección");
-            dt.Columns.Add("Telefono");
-            dt.Columns.Add("Actividad Empresa");
-            dt.Columns.Add("Tipo Empresa");
+            dt.Columns.Add("Código Postal");
+            dt.Columns.Add("Correo");
+            dt.Columns.Add("Pais");
+            dt.Columns.Add("Rol");
+            dt.Columns.Add("Estado");
+            dt.Columns.Add("Términos y Condiciones");
 
-            foreach (Cliente dato in listaClientes) {
-                DataRow row = dt.NewRow();
+            //var json = JsonConvert.SerializeObject(userObject);
+            //var data = new StringContent(json, Encoding.UTF8, "application/json");
+            var url = "http://localhost:8080/api/usuario/1";
 
-                actividadEmpresa.Read(dato.IdActividadEmpresa);
-                tipoEmpresa.Read(dato.IdTipoEmpresa);
+            using (HttpClient client = new HttpClient())
 
-                row["Rut Cliente"] = dato.RutCliente;
-                row["Razón social"] = dato.RazonSocial;
-                row["Nombre contacto"] = dato.NombreContacto;
-                row["Mail contacto"] = dato.MailContacto;
-                row["Dirección"] = dato.Direccion;
-                row["Telefono"] = dato.Telefono;
-                row["Actividad Empresa"] = actividadEmpresa.Descripcion;
-                row["Tipo Empresa"] = tipoEmpresa.Descripcion;
-
-                dt.Rows.Add(row);
+            {
+                var response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                if (response.IsSuccessStatusCode)
+                {
+                    message.Content = await response.Content.ReadAsStringAsync();
+                    
+                }
+                else
+                {
+                    message.Content = $"Server error code {response.StatusCode}";
+                }
             }
+
+            //foreach (Cliente dato in listaClientes) {
+            //    DataRow row = dt.NewRow();
+
+            //    actividadEmpresa.Read(dato.IdActividadEmpresa);
+            //    tipoEmpresa.Read(dato.IdTipoEmpresa);
+
+            //    row["Rut Cliente"] = dato.RutCliente;
+            //    row["Razón social"] = dato.RazonSocial;
+            //    row["Nombre contacto"] = dato.NombreContacto;
+            //    row["Mail contacto"] = dato.MailContacto;
+            //    row["Dirección"] = dato.Direccion;
+            //    row["Telefono"] = dato.Telefono;
+            //    row["Actividad Empresa"] = actividadEmpresa.Descripcion;
+            //    row["Tipo Empresa"] = tipoEmpresa.Descripcion;
+
+            //    dt.Rows.Add(row);
+            //}
 
             dgClientes.ClearValue(ItemsControl.ItemsSourceProperty);
             dgClientes.ItemsSource = dt.DefaultView;
