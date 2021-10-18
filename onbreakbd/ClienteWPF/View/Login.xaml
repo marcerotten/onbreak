@@ -1,0 +1,50 @@
+﻿<Controls:MetroWindow x:Class="ClienteWPF.View.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClienteWPF"
+        mc:Ignorable="d"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        Height="466.5" Width="800"
+        xmlns:viewmodel="clr-namespace:ClienteWPF.ViewModel" xmlns:components="clr-namespace:ClienteWPF.Components">
+
+    <Window.Resources>
+        <viewmodel:LoginViewModel x:Key="loginViewModel" />
+    </Window.Resources>
+
+    <Border Name="fondo" BorderThickness="30" HorizontalAlignment="Left" Height="440" VerticalAlignment="Top" Width="800" Margin="0,0,0,-21">
+        <Border.BorderBrush>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF1190CB"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <Grid Name="fondoInterno">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="52*"/>
+                <ColumnDefinition Width="299*"/>
+                <ColumnDefinition Width="207*"/>
+                <ColumnDefinition Width="183*"/>
+            </Grid.ColumnDefinitions>
+            <Label Name="lblTitulo" Content="Administrador de Clientes y Contratos" Margin="28,34,13,296" FontSize="26" Foreground="#FF1190CB" FontWeight="Bold" Grid.ColumnSpan="3"/>
+            <Border Name="borde" BorderBrush="#FF1190CB" BorderThickness="10" HorizontalAlignment="Left" Height="222" Margin="28,114,0,0" VerticalAlignment="Top" Width="557" Grid.ColumnSpan="4">
+                <Grid DataContext ="{StaticResource loginViewModel}">
+                    <Label Name="lblIngreso" Content="Ingreso" HorizontalAlignment="Left" Margin="25,20,0,0" VerticalAlignment="Top" FontSize="28" Foreground="#FF1190CB" FontWeight="Bold"/>
+                    <Label Name="lblUser" Content="Usuario" HorizontalAlignment="Left" Margin="150,67,0,0" VerticalAlignment="Top" Foreground="#FF1190CB"/>
+                    <Label Name="lblPassword" Content="Contraseña" HorizontalAlignment="Left" Margin="130,98,0,0" VerticalAlignment="Top" Foreground="#FF1190CB"/>
+                    <TextBox Name="txtUser" Text="{Binding User}"  HorizontalAlignment="Left" Height="23" Margin="234,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Controls:TextBoxHelper.Watermark="" Foreground="LightGray" BorderBrush="#FFEAE6E6"/>
+                    <Button Content="Entrar" Command="{Binding GetInCommand}" HorizontalAlignment="Left" Margin="199,139,0,0" VerticalAlignment="Top" Width="110" Height="32" Foreground="#FF1190CB"/>
+                    <components:BindablePasswordBox Password="{Binding Password, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" HorizontalAlignment="Left" Margin="234,98,0,0" VerticalAlignment="Top" Width="120" Height="23">
+                    </components:BindablePasswordBox>
+                    <Label x:Name="message" Content="Label" HorizontalAlignment="Left" Margin="25,166,0,0" VerticalAlignment="Top" Foreground="#FF1190CB"/>
+                </Grid>
+            </Border>
+            <Image Margin="28,10,10,305" Source="/Images/logoTexto.png" Stretch="Fill" Grid.Column="3"/>
+            <!--<Image Margin="0,370,-22.279,-29" Source="highcontrast-icon-darkgray.png" Stretch="Fill" HorizontalAlignment="Right" Width="34" Grid.Column="3"/>-->
+            <!--<Button Name="HighContrast" ToolTip="Boton para cambiar a modo de Alto Contraste" Content="" Grid.Column="3" HorizontalAlignment="Right" Height="34" Margin="0,370,-22.279,-29" VerticalAlignment="Top" Width="34" Background="{x:Null}" Click="HighContrast_Click"/>-->
+        </Grid>
+    </Border>
+</Controls:MetroWindow>

@@ -9,13 +9,13 @@ using System.Windows.Media.Imaging;
 namespace ClienteWPF.View
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para Menu.xaml
     /// </summary>
-    public partial class MainWindow : MetroWindow
+    public partial class Menu : MetroWindow
     {
-        public MainWindow()
+        public Menu()
         {
-            InitializeComponent();
+            InitializeComponent();       
         }
     }
 }
